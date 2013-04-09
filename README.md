@@ -1,5 +1,7 @@
 # HashieWalker
 
+[![Build Status](https://secure.travis-ci.org/monterail/hashie_walker.png)](http://travis-ci.org/monterail/hashie_walker)
+
 `Hash`-version of `Array#map` that is recursive and works on keys and values simultaneously.
 
 ## Installation
