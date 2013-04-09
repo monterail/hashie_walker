@@ -1,6 +1,6 @@
 # HashieWalker
 
-TODO: Write a gem description
+`Hash`-version of `Array#map` that is recursive and works on keys and values simultaneously.
 
 ## Installation
 
@@ -18,7 +18,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+`HashieWalker` walks through object and transforms keys and values along the way.
+
+    object = { "One" => 1, "Two" => 2 }
+
+    HashieWalker.walk(object) do |map|
+      map.key { |key| key.downcase }
+      map.value { |value| value * value }
+    end
+    # => { "one" => 1, "two" => 4 }
+
+Object can be a `Hash`, `Array` or nested structure (e.g. an array of nested hashes with arrays as values). See specs for more examples.
+
+If you don't want to change keys simply do not provide a respective mapping function.
+
+    HashieWalker.walk(object) do |map|
+      map.key { |key| key.downcase }
+    end
+    # => { "one" => 1, "two" => 2 }
 
 ## Contributing
 

@@ -1,11 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'hashie_walker/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "hashie_walker"
-  spec.version       = HashieWalker::VERSION
+  spec.version       = "0.1.0"
   spec.authors       = ["Michał Szajbe"]
   spec.email         = ["michal.szajbe@gmail.com"]
   spec.description   = %q{Hash-version of Array's map method that is recursive and works on keys and values simultaneously.}
