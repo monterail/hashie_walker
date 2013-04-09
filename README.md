@@ -32,7 +32,7 @@ Or install it yourself as:
 
 Object can be a `Hash`, `Array` or nested structure (e.g. an array of nested hashes with arrays as values). See specs for more examples.
 
-If you don't want to change keys simply do not provide a respective mapping function.
+If you want to change only keys or values simply provide only a respective mapping function.
 
     HashieWalker.walk(object) do |map|
       map.key { |key| key.downcase }
