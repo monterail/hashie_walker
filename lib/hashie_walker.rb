@@ -2,7 +2,7 @@ require "multiblock"
 
 class HashieWalker
   def initialize
-    @multiblock = Multiblock.new { |obj| obj }
+    @multiblock = Multiblock.wrapper { |obj| obj }
     yield(@multiblock) if block_given?
   end
 
